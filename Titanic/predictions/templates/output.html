@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat de la prédiction</title>
+    <link rel="stylesheet" href="{% static "styl.css" %}">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px; 
+            
+            color: black;
+        }
+
+        .button {
+            background-color: #313A3D;
+            border: 0;
+            height: 50px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            color: white; 
+            font-size: 15px;
+            cursor: pointer;
+        }
+     
+        .button:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Résultat de la Prédiction: {{ result }}</h1>
+    <input class="button" type="button" value="Retourner à l'accueil" onclick="window.location.href='/'" />
+</body>
+</html>
